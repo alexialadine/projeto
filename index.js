@@ -1,0 +1,25 @@
+const autores = [
+    {
+        id: 1,
+        nome: "Alexia Ladine",
+        email: "alexialadineferreirasilveira@gmail.com",
+        biografia: "estudante de analise a desenvolvimento de sistemas",
+        foto: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQta00AyI_YFL4HoXKKY5nmd3V6dBDWoZC1aiBS6DRwdg&s=10"
+    }
+];
+
+const post = [
+    {
+        id: 1,
+        titulo: "meu primeiro post",
+        autor_id: 1
+    }
+];
+
+const comentarios = [
+    {
+        id: 1,
+        texto: "Adoreeeeeeeeei",
+        post_id: 1
+    }
+];

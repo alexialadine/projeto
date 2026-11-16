@@ -27,3 +27,13 @@ const comentarios = [
         post_id: 1
     }
 ];
+
+lista do que fazer
+- corrigir bug ao salvar novo post (feito)
+- mudar o layout geral, a interface do aplicativo.
+- colocar os comentarios embaixo do post, ou sinalizar ali no caixote "comentarios" de que qual post ele pertence
+até porque ele pede o post para colocar o comentario mas nao tem nada que mostre de qual post são
+- impedir de ter comentarios em branco
+- colocar imagens fofas e adoraveis segundo as inspirações de blog que eu vi no pinterest
+- deixar com aparencia de blog
+- impedir de realizar um post em branco porque eu quis

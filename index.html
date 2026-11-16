@@ -1,20 +1,86 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Teste</title>
+    <title>Meu Blog</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="estilo.css">
 </head>
-
 <body>
-    <main>
-        <h1>Bem vinda ao GIT :D</h1>
-        <a href="proposta.txt" target="_blank">ver minhas propostas</a>
-    </main>
-    <footer>@Alexia Ladine</footer>
-    <script href="index.js"></script>
-</body>
+    <header class="topo">
+        <div class="container py-3">
+            <h1>Meu Blog</h1>
+            <p class="mb-0">Um cantinho para compartilhar ideias ♡</p>
+        </div>
+    </header>
 
+    <main class="container py-4">
+        <section class="apresentacao mb-4">
+            <h2>Publicações</h2>
+            <p class="mb-0">Veja os posts, autores e comentários.</p>
+        </section>
+
+        <section class="mb-5">
+            <h3 class="titulo-secao">Posts</h3>
+            <div id="listaPosts" class="row g-3"></div>
+        </section>
+
+        <section class="painel p-3 mb-4">
+            <h3 class="titulo-secao">Cadastrar ou alterar post</h3>
+            <form id="formPost">
+                <input type="hidden" id="idPost">
+                <div class="mb-3">
+                    <label for="tituloPost" class="form-label">Título</label>
+                    <input type="text" class="form-control" id="tituloPost" required>
+                </div>
+                <div class="mb-3">
+                    <label for="autorPost" class="form-label">Autor</label>
+                    <select class="form-select" id="autorPost" required></select>
+                </div>
+                <button type="button" class="btn btn-rosa" onclick="gravarPost()">Salvar post</button>
+                <button type="reset" class="btn btn-outline-secondary" onclick="limparPost()">Limpar</button>
+            </form>
+        </section>
+
+        <section class="painel p-3 mb-4">
+            <h3 class="titulo-secao">Autores</h3>
+            <div id="listaAutores" class="mb-3"></div>
+            <form id="formAutor">
+                <input type="hidden" id="idAutor">
+                <div class="mb-2">
+                    <label for="nomeAutor" class="form-label">Nome</label>
+                    <input type="text" class="form-control" id="nomeAutor" required>
+                </div>
+                <div class="mb-2">
+                    <label for="emailAutor" class="form-label">E-mail</label>
+                    <input type="email" class="form-control" id="emailAutor" required>
+                </div>
+                <button type="button" class="btn btn-rosa" onclick="gravarAutor()">Salvar autor</button>
+                <button type="reset" class="btn btn-outline-secondary" onclick="limparAutor()">Limpar</button>
+            </form>
+        </section>
+
+        <section class="painel p-3 mb-4">
+            <h3 class="titulo-secao">Comentários</h3>
+            <div id="listaComentarios" class="mb-3"></div>
+            <form id="formComentario">
+                <input type="hidden" id="idComentario">
+                <div class="mb-2">
+                    <label for="textoComentario" class="form-label">Comentário</label>
+                    <input type="text" class="form-control" id="textoComentario" required>
+                </div>
+                <div class="mb-3">
+                    <label for="postComentario" class="form-label">Post</label>
+                    <select class="form-select" id="postComentario" required></select>
+                </div>
+                <button type="button" class="btn btn-rosa" onclick="gravarComentario()">Salvar comentário</button>
+                <button type="reset" class="btn btn-outline-secondary" onclick="limparComentario()">Limpar</button>
+            </form>
+        </section>
+    </main>
+
+    <footer class="text-center py-3">Meu Blog ♡</footer>
+    <script src="index.js"></script>
+</body>
 </html>
